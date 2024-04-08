@@ -4,7 +4,7 @@ let currentPrices = null;
 
 const fetchPrice = async () => {
     try {
-        const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,solana,ripple,binancecoin,polkadot,dogecoin,shiba-inu,litecoin&vs_currencies=usd');
+        const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano,solana,ripple,binancecoin,polkadot,dogecoin,litecoin,wrapped-bitcoin,chainlink,uniswap,polygon,internet-computer,near-protocol,litecoin,aptos,leo-token,ethereum-classic,stacks,filecoin,mantle,cosmos,arbitrum,immutable,render-token,bittensor,first-digital-usd,eos&vs_currencies=usd');
         currentPrices = response.data;
         console.log(`Updated Prices: ${JSON.stringify(currentPrices)} as of ${new Date()}`);
     } catch (error) {
