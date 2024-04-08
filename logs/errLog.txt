@@ -5,3 +5,8 @@
 2024-04-03	13:26:46	9f30732f-72a4-40ef-8576-9cbbec54f722	Error: Not allowed by CORS
 2024-04-03	13:26:46	b994ebe0-1f7a-45d0-8dc4-498e2564aae4	Error: Not allowed by CORS
 2024-04-03	13:37:46	90391ac3-7825-4972-bfa1-2a2b19d4affc	Error: The CORS policy for this site does not allow access from the specified Origin: https://mail.google.com
+2024-04-07	18:55:03	6f4cc794-88c9-4f95-bb6d-fdf41d54eb64	Error: The CORS policy for this site does not allow access from the specified Origin: null
+2024-04-07	18:55:33	605176be-f776-47a9-8a6b-37c465b75faf	Error: The CORS policy for this site does not allow access from the specified Origin: null
+2024-04-07	18:55:41	7d505561-7439-4539-bb30-01c069b6e1be	Error: The CORS policy for this site does not allow access from the specified Origin: null
+2024-04-07	18:55:47	1534f89a-556c-4ff4-b6f0-77d6999201a4	Error: The CORS policy for this site does not allow access from the specified Origin: null
+2024-04-07	18:55:53	b5af7ecf-4339-419d-9328-02a20e782d84	Error: The CORS policy for this site does not allow access from the specified Origin: null

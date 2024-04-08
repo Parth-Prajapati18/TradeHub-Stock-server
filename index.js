@@ -1,13 +1,25 @@
 require('dotenv').config();
 const express = require('express');
-const app = express();
+const http = require('http');
 const path = require('path');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
+const socketIo = require('socket.io');
+const priceSocket = require('./routes/prices')
 
-const port = 3002;
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server, {
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+});
+
+const port = process.env.PORT || 3002;
 
 app.use(logger);
 app.use(cors(corsOptions));
@@ -20,6 +32,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 //routes
 app.use('/', require('./routes/root'));
+priceSocket(io);
 
 
 app.all('*', (req, res) => {
@@ -35,6 +48,6 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Stock server is running on port ${port}`);
 });
